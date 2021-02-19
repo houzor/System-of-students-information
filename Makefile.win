@@ -1,0 +1,58 @@
+# Project: ÏîÄ¿9
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o memu-main.o hello.o funtions-main.o file-stu.o memu-print.o memu-college.o funtions-college.o funtions-print.o file-college.o funtion-list.o
+LINKOBJ  = main.o memu-main.o hello.o funtions-main.o file-stu.o memu-print.o memu-college.o funtions-college.o funtions-print.o file-college.o funtion-list.o
+LIBS     = -L"D:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"D:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = "System of Students information .exe"
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+memu-main.o: memu-main.c
+	$(CC) -c memu-main.c -o memu-main.o $(CFLAGS)
+
+hello.o: hello.c
+	$(CC) -c hello.c -o hello.o $(CFLAGS)
+
+funtions-main.o: funtions-main.c
+	$(CC) -c funtions-main.c -o funtions-main.o $(CFLAGS)
+
+file-stu.o: file-stu.c
+	$(CC) -c file-stu.c -o file-stu.o $(CFLAGS)
+
+memu-print.o: memu-print.c
+	$(CC) -c memu-print.c -o memu-print.o $(CFLAGS)
+
+memu-college.o: memu-college.c
+	$(CC) -c memu-college.c -o memu-college.o $(CFLAGS)
+
+funtions-college.o: funtions-college.c
+	$(CC) -c funtions-college.c -o funtions-college.o $(CFLAGS)
+
+funtions-print.o: funtions-print.c
+	$(CC) -c funtions-print.c -o funtions-print.o $(CFLAGS)
+
+file-college.o: file-college.c
+	$(CC) -c file-college.c -o file-college.o $(CFLAGS)
+
+funtion-list.o: funtion-list.c
+	$(CC) -c funtion-list.c -o funtion-list.o $(CFLAGS)
