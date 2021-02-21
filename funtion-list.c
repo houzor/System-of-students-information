@@ -1,5 +1,5 @@
 #include "all.h"
-//创建链表函数 
+//创建链表函数
 struct Node* createList()
 {
 	struct Node* headNode = (struct Node*)malloc(sizeof(struct Node));
@@ -7,7 +7,7 @@ struct Node* createList()
 	return headNode;
 };
 
-//创建结点函数 
+//创建结点函数
 struct Node* createNode(struct student data)
 {
 	struct Node* newNode = (struct Node*) malloc(sizeof(struct Node));
@@ -15,7 +15,7 @@ struct Node* createNode(struct student data)
 	newNode->next = NULL;
 	return newNode;
 }
-//创建链表函数 
+//创建链表函数
 struct Nodecollege* createListcollege()
 {
 	struct Nodecollege* headNodecollege = (struct Nodecollege*)malloc(sizeof(struct Nodecollege));
@@ -23,7 +23,7 @@ struct Nodecollege* createListcollege()
 	return headNodecollege;
 };
 
-//创建结点函数 
+//创建结点函数
 struct Nodecollege* createNodecollege(COLLEGE college)
 {
 	struct Nodecollege* newNodecollege = (struct Nodecollege*) malloc(sizeof(struct Nodecollege));
